@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(final String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		GeometryApp app = new GeometryApp(scanner);
+		GeometryApp app = new GeometryApp();
 		app.start();
-		scanner.close();
 	}
 }
