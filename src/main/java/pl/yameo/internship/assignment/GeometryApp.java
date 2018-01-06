@@ -2,7 +2,6 @@ package main.java.pl.yameo.internship.assignment;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class GeometryApp {
 	private Reader reader;

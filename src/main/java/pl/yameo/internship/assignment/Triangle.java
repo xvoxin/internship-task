@@ -1,5 +1,6 @@
 package main.java.pl.yameo.internship.assignment;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,9 +11,20 @@ public class Triangle implements Shape {
 
 
 	public Triangle(Double edgeA, Double edgeB, Double edgeC) {
-		this.edgeA = edgeA;
-		this.edgeB = edgeB;
-		this.edgeC = edgeC;
+
+		Double[] edges = new Double[] {edgeA, edgeB, edgeC};
+		Arrays.sort(edges);
+
+		if(edges[0] + edges[1] < edges[2]){
+
+			System.err.println("Triangle with these edges cannot exist!");
+			throw new IllegalArgumentException();
+		}
+		else{
+			this.edgeA = edgeA;
+			this.edgeB = edgeB;
+			this.edgeC = edgeC;
+		}
 	}
 
 	@Override
