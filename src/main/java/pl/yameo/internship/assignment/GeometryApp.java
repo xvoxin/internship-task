@@ -49,6 +49,7 @@ public class GeometryApp {
 		System.out.println("3) Circle");
 		System.out.println("4) Square");
 		System.out.println("5) Triangle");
+		System.out.println("6) Rhombus");
 		System.out.println("0) Back");
 		int option = reader.readInteger();
 
@@ -62,7 +63,9 @@ public class GeometryApp {
 			return createNewSquare();
 		} else if (option == 5) {
 			return createNewTriangle();
-		} else {
+		} else if (option == 6) {
+			return createNewRhombus();
+		}else {
 	 		return null;
 		}
 	}
@@ -118,6 +121,11 @@ public class GeometryApp {
 			((Triangle) activeShape).setEdgeB(reader.readDouble());
 			((Triangle) activeShape).setEdgeC(reader.readDouble());
 		}
+		else if (activeShape instanceof Rhombus) {
+			System.out.println("Please provide diagonals lengths(major, minor):");
+			((Rhombus) activeShape).setMajorDiagonal(reader.readDouble());
+			((Rhombus) activeShape).setMinorDiagonal(reader.readDouble());
+		}
 
 		System.out.println("Old shape: ");
 		System.out.print(activeShape.getName() + " with dimensions: ");
@@ -157,5 +165,10 @@ public class GeometryApp {
 	private Triangle createNewTriangle() {
 		System.out.println("Please provide three edge lengths:");
 		return new Triangle(reader.readDouble(), reader.readDouble(), reader.readDouble());
+	}
+
+	private Rhombus createNewRhombus() {
+		System.out.println("Please provide diagonals lengths(major, minor):");
+		return new Rhombus(reader.readDouble(), reader.readDouble());
 	}
 }
