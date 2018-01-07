@@ -1,0 +1,7 @@
+1. Methods 'readInteger' and 'readDouble' are very similar to each other, but they are simple enough
+    that making one, more complicated method have no sense for me.
+
+2. Square test don't pass for one simple reason - with changing height or width we change every dimensions. 
+    Of course it can be changed, but a square wont be a square anymore. In this case extending 
+    Rectangle class have no biggest sense, because from this square we wont be able to make rectangle again. 
+    This same situation applies to circle and ellipse. Both of these classes were tested by me and I left them deliberately in project.
