@@ -15,7 +15,7 @@ public class Triangle implements Shape {
 		Double[] edges = new Double[] {edgeA, edgeB, edgeC};
 		Arrays.sort(edges);
 
-		if(edges[0] + edges[1] < edges[2]){
+		if(edges[0] + edges[1] <= edges[2]){
 
 			System.err.println("Triangle with these edges cannot exist!");
 			throw new IllegalArgumentException();
