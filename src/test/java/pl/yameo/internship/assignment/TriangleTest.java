@@ -2,7 +2,6 @@ package test.java.pl.yameo.internship.assignment;
 
 import main.java.pl.yameo.internship.assignment.Triangle;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class TriangleTest {
