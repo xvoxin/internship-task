@@ -11,28 +11,22 @@ public class Reader {
     }
 
     public Integer readInteger() {
-        Integer value = null;
-
-        while (value == null) {
+        while (true) {
             if (scanner.hasNextInt()) {
-                value = scanner.nextInt();
+                return scanner.nextInt();
             } else {
                 scanner.next();
             }
         }
-        return value;
     }
 
     public Double readDouble(){
-        Double value = null;
-
-        while (value == null) {
+        while (true) {
             if (scanner.hasNextDouble()) {
-                value = scanner.nextDouble();
+                return scanner.nextDouble();
             } else {
                 scanner.next();
             }
         }
-        return value;
     }
 }

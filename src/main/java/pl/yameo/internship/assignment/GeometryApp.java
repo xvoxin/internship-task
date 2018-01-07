@@ -80,7 +80,9 @@ public class GeometryApp {
 
 	private void modifyShape() {
 		listShapes();
+
 		System.out.println("Please choose the index of the shape you want to modify (1-" + shapes.size() + "): ");
+
 		int index = reader.readInteger();
 		Shape activeShape = shapes.get(index - 1);
 		List<Double> oldDimensions = activeShape.listDimensions();
@@ -96,16 +98,20 @@ public class GeometryApp {
 			System.out.println("Please provide two semi-axis lengths (major, minor):");
 			((Ellipse) activeShape).setSemiMajorAxis(reader.readDouble());
 			((Ellipse) activeShape).setSemiMinorAxis(reader.readDouble());
+
 		} else if (activeShape instanceof Circle) {
 			System.out.println("Please provide the radius for the circle:");
 			((Circle) activeShape).setRadius(reader.readDouble());
+
 		} else if (activeShape instanceof Square) {
 			System.out.println("Please provide the edge length:");
 			((Square) activeShape).setDimension(reader.readDouble());
+
 		} else if (activeShape instanceof Rectangle) {
 			System.out.println("Please provide two edge lengths (height, width):");
 			((Rectangle) activeShape).setHeight(reader.readDouble());
 			((Rectangle) activeShape).setWidth(reader.readDouble());
+
 		} else if (activeShape instanceof Triangle) {
 			System.out.println("Please provide three edge lengths:");
 			((Triangle) activeShape).setEdgeA(reader.readDouble());

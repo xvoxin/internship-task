@@ -48,7 +48,8 @@ public class SquareTest {
 	public void when_rectangle_width_is_halved_then_its_area_is_halved() {
 		Rectangle square = new Square(INITIAL_DIMENSION);
 		Assert.assertEquals(square.calculateArea(), INITIAL_AREA, DELTA);
-		square.setWidth(INITIAL_DIMENSION / 2);
-		Assert.assertEquals(square.calculateArea(), INITIAL_AREA / 2, DELTA);
+		square.setWidth(INITIAL_DIMENSION / 2); //
+		Assert.assertEquals(square.calculateArea(), INITIAL_AREA /2, DELTA);
 	}
+	//
 }
