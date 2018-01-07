@@ -7,6 +7,7 @@ import org.junit.Test;
 public class TriangleTest {
 
 	private static final Double DELTA = 0.001;
+	private static final String SHAPE_NAME = "Triangle";
 
 	private static final Double INITIAL_EDGE_A = 3.0;
 	private static final Double INITIAL_EDGE_B = 4.0;
@@ -20,6 +21,13 @@ public class TriangleTest {
 
 	private static final Double NEW_EXPECTED_AREA = 11.619;
 	private static final Double NEW_EXPECTED_PERIMETER = 18.0;
+
+	@Test
+	public void when_triangle_created_then_it_has_proper_name() {
+
+		Triangle triangle = new Triangle(INITIAL_EDGE_A, INITIAL_EDGE_B, INITIAL_EDGE_C);
+		Assert.assertEquals(triangle.getName(), SHAPE_NAME);
+	}
 
 	@Test
 	public void when_triangle_is_created_then_proper_dimensions_are_returned() {
