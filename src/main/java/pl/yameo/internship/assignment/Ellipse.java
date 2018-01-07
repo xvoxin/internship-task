@@ -24,12 +24,12 @@ public class Ellipse implements Shape {
 
 	@Override
 	public final Double calculateArea() {
-		return Math.PI * (3 * (semiMajorAxis + semiMinorAxis) / 2 - Math.sqrt(semiMajorAxis * semiMinorAxis));
+		return Math.PI * semiMajorAxis * semiMinorAxis;
 	}
 
 	@Override
 	public final Double calculatePerimeter() {
-		return Math.PI * semiMajorAxis * semiMinorAxis;
+		return Math.PI * (3 * (semiMajorAxis + semiMinorAxis) / 2 - Math.sqrt(semiMajorAxis * semiMinorAxis));
 	}
 
 	public void setSemiMajorAxis(Double semiMajorAxis) {
